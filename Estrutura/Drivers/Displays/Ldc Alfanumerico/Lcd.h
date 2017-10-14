@@ -1652,6 +1652,7 @@ void Lcd_LimpaBuffer (Uchar Linha);
 void Lcd_LimpaBuffers(void);
 Uchar *Lcd_RetornaEnderecoDoBuffer (Uchar Linha, Uchar Coluna);
 Uchar *Lcd_TransfereMensagemParaBuffer (Uchar *Buffer, Cchar *Mensagem);
+void Lcd_TransfereMensagemParaLinhaBuffer (Uchar Linha, Cchar *Mensagem);
 Uchar *Lcd_EscreveCaractereNoBuffer (Uchar *Buffer, Uchar Caractere);
 void Lcd_AtualizaLinha (Uchar Linha);
 void Lcd_AtualizaDisplay (void);

@@ -431,7 +431,6 @@ void Lcd_AtualizaLinha (Uchar Linha)
     }    
 }
 
-
 /*
  * Lcd_AtualizaDisplay
  * Envia os dados dos buffers para o display
@@ -470,6 +469,39 @@ Uchar *Lcd_TransfereMensagemParaBuffer (Uchar *Buffer, Cchar *Mensagem)
     }
     
     return Buffer;
+}
+
+/*
+ * Lcd_TransfereMensagemParaLinhaBuffer
+ * Transfere uma mensagem de ate 20 caracteres contida na memória Flash para um 
+ * dos buffers de linha do display.
+ * Linha: Aponta para a linha do buffer, onde a mensagem será transferida
+ * *Mensagem: Aponta para a mensagem que será transferida
+ */
+void Lcd_TransfereMensagemParaLinhaBuffer (Uchar Linha, Cchar *Mensagem)
+{
+    Uchar i = 0;
+    while (*Mensagem != '\0')
+    {
+        switch (Linha)
+        {
+            case 1:
+                Lcd.Buffers.Linha1[i] = *Mensagem++;
+                break;
+            case 2:
+                Lcd.Buffers.Linha2[i] = *Mensagem++;
+                break;
+            case 3:
+                Lcd.Buffers.Linha3[i] = *Mensagem++;
+                break;
+            case 4:
+                Lcd.Buffers.Linha4[i] = *Mensagem++;
+                break;
+            default:
+                break;
+        }
+        i++;
+    }
 }
 
 
