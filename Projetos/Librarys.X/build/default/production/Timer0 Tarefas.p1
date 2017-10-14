@@ -1,0 +1,13 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"14 Timer0 Tarefas.c
+[v _Timer0_Tarefas `(v ~T0 @X0 1 ef ]
+"15
+{
+[; ;Timer0 Tarefas.c: 14: void Timer0_Tarefas (void)
+[; ;Timer0 Tarefas.c: 15: {
+[e :U _Timer0_Tarefas ]
+[f ]
+[; ;Timer0 Tarefas.c: 21: }
+"21
+[e :UE 1 ]
+}
